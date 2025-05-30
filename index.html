@@ -131,12 +131,65 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .site-title:hover {
+            color: var(--accent-color);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+        .nav-menu a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--accent-color);
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="index.html" class="site-title">Tech Insights - Winston Tatwa</a>
+            <a href="index.html" class="site-title">IST-4035 Advanced Web Design</a>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
