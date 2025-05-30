@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
   color: #0066cc;
+  transition: all 0.3s ease;
 }
 
 a:hover {
@@ -24,4 +25,9 @@ h2 {
 
 p {
   color: #333;
+}
+
+blockquote:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
