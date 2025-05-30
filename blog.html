@@ -2,29 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Software Engineering Skills</title>
+  <title>Winston Tatwa | Software Engineer</title>
+
+  <!-- Embedded CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    article {
+      flex: 2;
+      background: white;
+      padding: 1rem;
+      margin-right: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    aside {
+      flex: 1;
+      background: #e6f2ff;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Imported CSS (Google Fonts) -->
+  <link rel="stylesheet" href="fonts.css">
 </head>
+
 <body>
+
+  <header>
+    <h1 style="font-size: 3rem;">Winston Tatwa</h1> <!-- Inline CSS -->
+    <p style="color: #99ccff;">Software Engineer | Full Stack Developer</p> <!-- Inline CSS -->
+  </header>
+
   <main>
     <article>
+      <img src="images/placeholder.jpg" alt="Profile Photo" style="width: 100%; border-radius: 10px;">
       <h2>My Software Engineering Skills</h2>
-      <p>I am a software engineering student with strong coding skills in Python and JavaScript.</p>
-      <p>I have experience in full-stack web development using React and Node.js.</p>
-      <p>I’m skilled in database management with MySQL and MongoDB.</p>
-      <p>I have completed several projects involving REST APIs and cloud deployment.</p>
-      <p>I enjoy solving complex problems and collaborating in agile teams.</p>
+      <ul>
+        <li>Full-stack development with React & Node.js</li>
+        <li>Python scripting and backend logic</li>
+        <li>REST APIs & cloud deployment</li>
+        <li>Database: MySQL & MongoDB</li>
+        <li>Agile teamwork & problem-solving</li>
+      </ul>
+      <p><a href="register.html">Register for my blog</a></p>
     </article>
+
     <aside>
       <h3>Related Articles</h3>
       <ul>
         <li>How I Built My Final Year Project</li>
         <li>Top Tools for Full-Stack Developers</li>
+        <li>My Journey into Software Engineering</li>
       </ul>
     </aside>
-
-    <!-- Hyperlink to Register -->
-    <p><a href="register.html">Register for my blog</a></p>
-
   </main>
+
+  <footer>
+    <p>© 2025 Winston Tatwa | <a href="#" style="color: #99ccff;">LinkedIn</a> | <a href="#" style="color: #99ccff;">GitHub</a></p>
+  </footer>
+
 </body>
 </html>
