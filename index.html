@@ -1,12 +1,188 @@
-<main>
-<article>
-<h2>News Headline</h2>
-<p>Some news content...</p>
-</article>
-<aside>
-<h3>Related Articles</h3>
-<ul>
-<li><a href="blog.html">Read my blog</a></li>
-</ul>
-</aside>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Insights - Winston Tatwa</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+            --accent-color: #e6f2ff;
+            --text-color: #333;
+            --gradient-start: #ffffff;
+            --gradient-end: #f0f8ff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        main {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        article {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        aside {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        aside h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside li {
+            margin-bottom: 1rem;
+        }
+
+        aside a {
+            display: block;
+            padding: 1rem;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        aside a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <article>
+                <h1>The Future of AI in Software Development: A Developer's Perspective</h1>
+                <div class="article-meta">
+                    By Winston Tatwa | Published: March 15, 2024 | 8 min read
+                </div>
+                <div class="article-content">
+                    <p>
+                        As a software engineer deeply immersed in both traditional development and emerging technologies, I've witnessed firsthand the transformative impact of artificial intelligence on our industry. The landscape of software development is evolving at an unprecedented pace, and AI is at the forefront of this revolution.
+                    </p>
+
+                    <div class="highlight-box">
+                        "The integration of AI in software development isn't just about automation—it's about augmenting human creativity and problem-solving capabilities."
+                    </div>
+
+                    <p>
+                        In recent years, we've seen AI tools evolve from simple code completion assistants to sophisticated systems capable of understanding complex requirements, generating entire applications, and even debugging code. This shift isn't just changing how we write code; it's fundamentally altering the way we approach software development as a whole.
+                    </p>
+
+                    <h2>The Current State of AI in Development</h2>
+                    <p>
+                        Modern AI-powered development tools have become indispensable in our workflow. From GitHub Copilot to advanced code analysis tools, these systems are helping developers write better code faster. But what fascinates me most is how these tools are becoming more context-aware and capable of understanding the broader scope of our projects.
+                    </p>
+
+                    <h2>Challenges and Opportunities</h2>
+                    <p>
+                        While AI tools offer incredible potential, they also present unique challenges. As developers, we need to maintain a balance between leveraging AI capabilities and preserving the human elements of software development—creativity, critical thinking, and ethical considerations.
+                    </p>
+
+                    <h2>Looking Ahead</h2>
+                    <p>
+                        The future of software development will likely see AI becoming an even more integral part of our workflow. We're moving toward a future where AI doesn't just assist in coding but helps in architecture design, security analysis, and even project management. The key will be using these tools to enhance our capabilities rather than replace human expertise.
+                    </p>
+
+                    <p>
+                        As we navigate this evolving landscape, it's crucial for developers to stay adaptable and continuously learn. The most successful developers will be those who can effectively collaborate with AI tools while maintaining their unique human perspective and creativity.
+                    </p>
+                </div>
+            </article>
+        </main>
+
+        <aside>
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="blog.html">Learn more about my journey in tech</a></li>
+                <li><a href="register.html">Subscribe to my newsletter</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
