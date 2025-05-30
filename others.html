@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 Questions | IST-4035 Advanced Web Design</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+            --accent-color: #e6f2ff;
+            --text-color: #333;
+            --gradient-start: #ffffff;
+            --gradient-end: #f0f8ff;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .site-title:hover {
+            color: var(--accent-color);
+        }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+        .nav-menu a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--accent-color);
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem;
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        .question {
+            margin-bottom: 2.5rem;
+            background: var(--accent-color);
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 0 15px 15px 0;
+            padding: 1.5rem 1.5rem 1.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .question-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .question strong {
+            color: var(--secondary-color);
+        }
+        pre, code {
+            background: #f4f8fb;
+            color: #003366;
+            border-radius: 8px;
+            padding: 0.7em 1em;
+            font-size: 1rem;
+            font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+            display: block;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem 0.5rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="site-title">IST-4035 Advanced Web Design</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="others.html" class="active">Others</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Assignment 2 Questions</h1>
+        <div class="question">
+            <div class="question-title">1. Describe a reason to use embedded styles. Explain where embedded styles are placed on a web page.</div>
+            <strong>Reason to use embedded styles:</strong>
+            <p>Embedded styles are useful when you want to apply CSS rules to a single web page without affecting other pages. This is ideal for one-off designs or custom page-specific styling.</p>
+            <strong>Where embedded styles are placed:</strong>
+            <p>Embedded styles are placed within a <code>&lt;style&gt;</code> tag inside the <code>&lt;head&gt;</code> section of the HTML document.</p>
+            <div><strong>Example:</strong></div>
+            <pre><code>&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: lightblue;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+        <div class="question">
+            <div class="question-title">2. Describe a reason to use external styles. Explain where external styles are placed and how web pages indicate they are using external styles.</div>
+            <strong>Reason to use external styles:</strong>
+            <p>External styles are ideal for applying consistent styling across multiple web pages. They allow for easier maintenance and better separation of content (HTML) and design (CSS).</p>
+            <strong>Where external styles are placed:</strong>
+            <p>External styles are stored in a separate <code>.css</code> file (e.g., <code>mystyles.css</code>) and are not written directly in the HTML document.</p>
+            <strong>How web pages indicate they are using external styles:</strong>
+            <p>A web page links to an external stylesheet using a <code>&lt;link&gt;</code> tag inside the <code>&lt;head&gt;</code> section of the HTML document.</p>
+            <div><strong>Example:</strong></div>
+            <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="mystyles.css"&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>
