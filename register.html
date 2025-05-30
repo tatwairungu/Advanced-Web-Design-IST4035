@@ -1,44 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Register for My Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for My Blog</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0066cc;
+            --accent-color: #e6f2ff;
+            --text-color: #333;
+            --gradient-start: #ffffff;
+            --gradient-end: #f0f8ff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            min-height: 100vh;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+        form {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: 2px solid var(--accent-color);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        fieldset:hover {
+            transform: translateY(-2px);
+        }
+
+        legend {
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        label {
+            display: block;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,102,204,0.2);
+        }
+
+        input[type="submit"]:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,102,204,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Register for My Blog</h1>
-  <form action="#" method="post">
-    
-    <fieldset>
-      <legend>Personal Information</legend>
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+    <div class="container">
+        <h1>Register for My Blog</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
-    </fieldset>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </fieldset>
 
-    <fieldset>
-      <legend>Location</legend>
-      <label for="country">Country:</label><br>
-      <input type="text" id="country" name="country"><br><br>
+            <fieldset>
+                <legend>Location</legend>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country">
 
-      <label for="city">City:</label><br>
-      <input type="text" id="city" name="city"><br><br>
-    </fieldset>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city">
+            </fieldset>
 
-    <fieldset>
-      <legend>Preferences</legend>
-      <label for="browser">What browser will you be using?</label><br>
-      <select id="browser" name="browser">
-        <option value="chrome">Google Chrome</option>
-        <option value="firefox">Mozilla Firefox</option>
-        <option value="edge">Microsoft Edge</option>
-        <option value="safari">Safari</option>
-        <option value="other">Other</option>
-      </select><br><br>
-    </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="browser">What browser will you be using?</label>
+                <select id="browser" name="browser">
+                    <option value="chrome">Google Chrome</option>
+                    <option value="firefox">Mozilla Firefox</option>
+                    <option value="edge">Microsoft Edge</option>
+                    <option value="safari">Safari</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
 
-    <input type="submit" value="Register">
-  </form>
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
 </html>
