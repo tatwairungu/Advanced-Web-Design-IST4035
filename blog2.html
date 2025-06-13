@@ -2,43 +2,119 @@
 <html>
 <head>
   <title>My Profile Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #666666;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #cccccc;
+    }
+
+    h2 {
+      color: #444444;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555555;
+    }
+
+    ul {
+      color: #555555;
+      line-height: 1.6;
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      color: #555555;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #0077b5;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #005f8a;
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px;">
+<body>
+  <div class="container">
+    <h1>John Doe</h1>
 
-  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <img src="https://via.placeholder.com/150" alt="John Doe" class="profile-image">
 
-    <h1 style="text-align: center; color: #333333;">John Doe</h1>
+    <p class="subtitle">Web Developer | Designer | Blogger</p>
 
-    <img src="https://via.placeholder.com/150" alt="John Doe" style="display: block; margin: 0 auto; border-radius: 50%;">
+    <hr>
 
-    <p style="text-align: center; font-size: 18px; color: #666666;">Web Developer | Designer | Blogger</p>
-
-    <hr style="border: 0; height: 1px; background-color: #cccccc;">
-
-    <h2 style="color: #444444;">About Me</h2> 
-    <p style="line-height: 1.6; color: #555555;">
-      I am a passionate web developer with 5+ years of experience building modern, user-friendly websites. I enjoy working with HTML, CSS, JavaScript, and exploring the latest web technologies.
+    <h2>About Me</h2>
+    <p>
+      I am a passionate web developer with 5+ years of experience building modern, user-friendly websites.
+      I enjoy working with HTML, CSS, JavaScript, and exploring the latest web technologies.
     </p>
 
-    <h2 style="color: #444444;">Skills</h2>
-    <ul style="color: #555555; line-height: 1.6;"> 
-      <li style="margin-bottom: 5px;">HTML & CSS</li>
-      <li style="margin-bottom: 5px;">JavaScript & React</li>
-      <li style="margin-bottom: 5px;">Responsive Design</li> 
-      <li style="margin-bottom: 5px;">UI/UX Principles</li>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript & React</li>
+      <li>Responsive Design</li>
+      <li>UI/UX Principles</li>
     </ul>
 
-    <h2 style="color: #444444;">Contact</h2>
-    <p style="color: #555555;">
+    <h2>Contact</h2>
+    <p class="contact">
       • Email: john.doe@example.com<br>
       • Phone: +123 456 7890
     </p>
 
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="https://www.linkedin.com" target="_blank" style="display: inline-block; background-color: #0077b5; color: #ffffff; padding: 10px 20px; border-radius: 4px; text-decoration: none;">Connect on LinkedIn</a>
+    <div style="text-align: center;">
+      <a href="https://www.linkedin.com" target="_blank" class="button">Connect on LinkedIn</a>
     </div>
-
   </div>
 </body>
 </html>
